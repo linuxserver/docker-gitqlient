@@ -1,0 +1,30 @@
+---
+
+# jenkins variables
+project_name: docker-gitqlient
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: master
+build_armhf: false
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'francescmm'
+  - EXT_REPO = 'GitQlient'
+  - BUILD_VERSION_ARG = 'GITQLIENT_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-gitqlient'
+  - CONTAINER_NAME = 'gitqlient'
+  - DOCKERHUB_IMAGE = 'linuxserver/gitqlient'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/gitqlient'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/gitqlient'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH = 'true'
+  - CI = 'true'
+  - CI_WEB = 'true'
+  - CI_PORT = '3000'
+  - CI_SSL = 'false'
+  - CI_DELAY = '120'
+  - CI_DOCKERENV = 'TZ=US/Pacific'
+  - CI_AUTH = 'user:password'
+  - CI_WEBPATH = ''
