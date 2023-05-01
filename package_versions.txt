@@ -4,7 +4,7 @@ NAME                                                                          VE
 @socket.io/component-emitter                                                  3.1.0                                                npm        
 @types/cookie                                                                 0.4.1                                                npm        
 @types/cors                                                                   2.8.13                                               npm        
-@types/node                                                                   18.15.13                                             npm        
+@types/node                                                                   18.16.3                                              npm        
 accepts                                                                       1.3.8                                                npm        
 alpine-baselayout                                                             3.4.0-r0                                             apk        
 alpine-baselayout-data                                                        3.4.0-r0                                             apk        
@@ -103,8 +103,8 @@ gdbm                                                                          1.
 gdk-pixbuf                                                                    2.42.10-r0                                           apk        
 get-intrinsic                                                                 1.2.0                                                npm        
 giflib                                                                        5.2.1-r2                                             apk        
-git                                                                           2.38.4-r1                                            apk        
-git-perl                                                                      2.38.4-r1                                            apk        
+git                                                                           2.38.5-r0                                            apk        
+git-perl                                                                      2.38.5-r0                                            apk        
 github.com/AlecAivazis/survey/v2                                              v2.3.6                                               go-module  
 github.com/Microsoft/hcsshim                                                  v0.9.6                                               go-module  
 github.com/beorn7/perks                                                       v1.0.1                                               go-module  
@@ -515,7 +515,7 @@ perl-clone                                                                    0.
 perl-devel-symdump                                                            2.18-r2                                              apk        
 perl-error                                                                    0.17029-r1                                           apk        
 perl-exporter-tiny                                                            1.006000-r0                                          apk        
-perl-git                                                                      2.38.4-r1                                            apk        
+perl-git                                                                      2.38.5-r0                                            apk        
 perl-hash-merge-simple                                                        0.051-r3                                             apk        
 perl-list-moreutils                                                           0.430-r0                                             apk        
 perl-list-moreutils-xs                                                        0.430-r2                                             apk        
