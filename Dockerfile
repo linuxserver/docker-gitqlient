@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.17 as buildstage
+FROM ghcr.io/linuxserver/baseimage-alpine:3.19 as buildstage
 
 ARG GITQLIENT_RELEASE
 
@@ -27,7 +27,7 @@ RUN \
   make -j 4 && \
   make install
 
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:alpine317
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:alpine319
 
 # set version label
 ARG BUILD_DATE
