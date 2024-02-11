@@ -38,6 +38,10 @@ LABEL maintainer="thelamer"
 COPY --from=buildstage /build-out/ /
 
 RUN \
+  echo "**** add icon ****" && \
+  curl -o \
+    /kclient/public/icon.png \
+    https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/gitqlient-icon.png && \
   echo "**** install packages ****" && \
   apk add --no-cache \
     git \
@@ -49,7 +53,6 @@ RUN \
   ln -s \
     /usr/lib/ssh/gtk-ssh-askpass \
     /usr/bin/ssh-askpass && \
-  sed -i 's|</applications>|  <application title="GitQlient" type="normal">\n    <maximized>yes</maximized>\n  </application>\n</applications>|' /etc/xdg/openbox/rc.xml && \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/*
