@@ -6,6 +6,7 @@ project_url: "https://github.com/francescmm/GitQlient"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/gitqlient-icon.png"
 project_blurb: "[GitQlient]({{ project_url }}) is a multi-platform Git client originally forked from QGit. Nowadays it goes beyond of just a fork and adds a lot of new functionality."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Programming"
 project_blurb_optional_extras_enabled: false
 # supported architectures
 available_architectures:
