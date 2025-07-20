@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.21 AS buildstage
+FROM ghcr.io/linuxserver/baseimage-alpine:3.22 AS buildstage
 
 ARG GITQLIENT_RELEASE
 
@@ -27,7 +27,7 @@ RUN \
   make -j 4 && \
   make install
 
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:alpine321
+FROM ghcr.io/linuxserver/baseimage-selkies:alpine322
 
 # set version label
 ARG BUILD_DATE
@@ -35,12 +35,15 @@ ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="thelamer"
 
+# title
+ENV TITLE=GitQlient
+
 COPY --from=buildstage /build-out/ /
 
 RUN \
   echo "**** add icon ****" && \
   curl -o \
-    /kclient/public/icon.png \
+    /usr/share/selkies/www/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/gitqlient-icon.png && \
   echo "**** install packages ****" && \
   apk add --no-cache \
