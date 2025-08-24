@@ -11,16 +11,17 @@ RUN \
 
 RUN \
   echo "**** grab source ****" && \
-  git clone https://github.com/francescmm/GitQlient.git
+  git clone https://github.com/francescmaestre/GitQlient.git
 
 RUN \
   echo "**** build gitqclient ****" && \
   mkdir -p /build-out/usr && \
   if [ -z ${GITQLIENT_RELEASE+x} ]; then \
-    GITQLIENT_RELEASE=$(curl -sX GET "https://api.github.com/repos/francescmm/GitQlient/releases/latest" \
+    GITQLIENT_RELEASE=$(curl -sX GET "https://api.github.com/repos/francescmaestre/GitQlient/releases/latest" \
     | awk '/tag_name/{print $4;exit}' FS='[""]'); \
   fi && \
   cd /GitQlient && \
+  git checkout "${GITQLIENT_RELEASE}" && \
   qmake-qt5 GitQlient.pro \
     PREFIX=/build-out/usr \
     VERSION=${GITQLIENT_RELEASE:1} && \
