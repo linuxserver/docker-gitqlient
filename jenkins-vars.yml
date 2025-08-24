@@ -9,7 +9,7 @@ ls_branch: master
 build_armhf: false
 repo_vars:
   - EXT_GIT_BRANCH = 'master'
-  - EXT_USER = 'francescmm'
+  - EXT_USER = 'francescmaestre'
   - EXT_REPO = 'GitQlient'
   - BUILD_VERSION_ARG = 'GITQLIENT_RELEASE'
   - LS_USER = 'linuxserver'
