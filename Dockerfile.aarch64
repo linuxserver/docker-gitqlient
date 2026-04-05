@@ -39,7 +39,9 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE=GitQlient
+ENV TITLE=GitQlient \
+    NO_GAMEPAD=true \
+    PIXELFLUX_WAYLAND=true
 
 COPY --from=buildstage /build-out/ /
 
