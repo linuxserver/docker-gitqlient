@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.23 AS buildstage
+FROM ghcr.io/linuxserver/baseimage-alpine:3.24 AS buildstage
 
 ARG GITQLIENT_RELEASE
 
@@ -30,7 +30,7 @@ RUN \
   make -j 4 && \
   make install
 
-FROM ghcr.io/linuxserver/baseimage-selkies:alpine323
+FROM ghcr.io/linuxserver/baseimage-selkies:alpine324
 
 # set version label
 ARG BUILD_DATE
