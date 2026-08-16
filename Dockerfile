@@ -20,7 +20,7 @@ RUN \
   mkdir -p /build-out/usr && \
   if [ -z ${GITQLIENT_RELEASE+x} ]; then \
     GITQLIENT_RELEASE=$(curl -sX GET "https://api.github.com/repos/francescmaestre/GitQlient/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]'); \
+    | jq -r '.tag_name'); \
   fi && \
   cd /GitQlient && \
   git checkout "${GITQLIENT_RELEASE}" && \
